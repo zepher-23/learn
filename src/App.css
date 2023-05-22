@@ -1,0 +1,41 @@
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a044ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3f6fb5;
+}
+
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Adjust the distance you want the element to move */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-png {
+    animation: moveUpDown 3s ease-in-out infinite;
+    /* Adjust the animation duration as needed */
+}
+

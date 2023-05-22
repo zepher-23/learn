@@ -1,0 +1,7 @@
+.nav-option {
+color:black;
+    transition: 0.2s;
+}
+.nav-option:hover{
+color: #a044ff;
+}
