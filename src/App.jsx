@@ -148,7 +148,7 @@ const ServiceInfo = styled(Box)(({ theme }) => ({
   boxShadow: theme.shadows[0],
   marginTop: '10px',
   marginRight:'10px',
-  backgroundColor: theme.palette.background.lighter
+  backgroundColor: theme.palette.background.light
   
 }))
 
@@ -230,9 +230,9 @@ Transform your career prospects with our immersive programs, bridging academia a
      
       
       <Box sx={{ backgroundColor: 'background.lighter' }}>
-        <Grid container sx={{display:'flex',flexWrap:'wrap',justifyContent:'center',p:8}}>
-          <Grid xs={12} md={6} lg={10}>
-            <Service>
+        <Grid container sx={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
+          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}}>
+            
               
               <Typography variant='h4' sx={{ mb: 0, color: 'tertiary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s' }}> Internship Training</Typography>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
@@ -246,11 +246,10 @@ Transform your career prospects with our immersive programs, bridging academia a
 
               </Box>
               
-            </Service>
+            
            
           </Grid>
-          <Grid xs={12} md={6} lg={10} >
-            <Service>
+          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}} >
               <Typography variant='h4' sx={{ mb: 0, color:'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s'}}> Skill Courses</Typography>
               <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
@@ -262,12 +261,11 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
                 <ServiceInfo><WhatsAppIcon sx={{color:'tertiary.main'}} /> <InfoText>Whatsapp Support</InfoText>  </ServiceInfo>
 
               </Box>
-            </Service>
            
           </Grid>
           
-          <Grid xs={12} md={6} lg={10} >
-            <Service>
+          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}} >
+            
               <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s' }}> Project Guidance</Typography>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution
 
@@ -283,11 +281,11 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
                 <ServiceInfo><img src={expertIcon } style={{width:'25px'}}/> <InfoText>Expert Guidance </InfoText>  </ServiceInfo>
 
               </Box>
-            </Service>
+            
            
           </Grid>
-          <Grid xs={12} md={6} lg={10}>
-            <Service>
+          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}}>
+           
 <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main' , fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s'}}> College Admissions</Typography>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
@@ -300,7 +298,6 @@ Are you a student dreaming of attending your dream college or university? Our Co
                 <ServiceInfo><img src={university} style={{width:'25px'}} /> <InfoText>Top University</InfoText>  </ServiceInfo>
 
               </Box>
-            </Service>
            
           </Grid>
 
