@@ -72,7 +72,7 @@ const Navbar = () => {
                          <Button variant="contained" className="" sx={{p:1,mr:1,width:'120px',height:'35px', backgroundImage: 'linear-gradient(to right, #28c2dc, #a044ff)',color:'white'}}  endIcon={<LoginIcon />}>
                             login
                         </Button>
-                        <Typography variant="h5">/</Typography>
+                        {/* <Typography variant="h5">/</Typography> */}
                         <Button variant="outlined" color='secondary' className="" sx={{p:1,ml:1,width:'120px', height:'35px'}} >
                             sign up
                         </Button>
