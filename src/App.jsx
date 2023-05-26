@@ -229,12 +229,12 @@ Transform your career prospects with our immersive programs, bridging academia a
       </Box>
      
       
-      <Box sx={{ backgroundColor: 'background.lighter' }}>
+      <Box sx={{ backgroundColor: 'white' }}>
         <Grid container sx={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
-          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}}>
+          <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mt:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
             
               
-              <Typography variant='h4' sx={{ mb: 0, color: 'tertiary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s' }}> Internship Training</Typography>
+            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Internship Training </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
                 Are you a student or aspiring professional looking to kick-start your career? Our Internship Training program offers a unique opportunity to gain hands-on experience and develop essential skills in your chosen field.
@@ -243,14 +243,13 @@ Transform your career prospects with our immersive programs, bridging academia a
                 <ServiceInfo><EventIcon sx={{color:'#fbc02d'}} /> <InfoText>2-6 Months</InfoText>  </ServiceInfo>
                 <ServiceInfo><AccessTimeFilledIcon sx={{color:'#00bcd4'}} /> <InfoText>24/7 Online Mentor</InfoText>  </ServiceInfo>
                 <ServiceInfo><WhatsAppIcon sx={{color:'tertiary.main'}} /> <InfoText>Whatsapp Support</InfoText>  </ServiceInfo>
-
               </Box>
               
             
            
           </Grid>
-          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}} >
-              <Typography variant='h4' sx={{ mb: 0, color:'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s'}}> Skill Courses</Typography>
+          <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
+            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Skill Courses </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
               <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
 Are you ready to acquire new skills and elevate your career? Our Skill Courses on the EdTech platform offer a wide range of courses designed to empower you with the knowledge and expertise you need to succeed in today's fast-paced world.
@@ -264,9 +263,9 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
            
           </Grid>
           
-          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}} >
+          <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             
-              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s' }}> Project Guidance</Typography>
+            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Project Guidance </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution
 
 </Typography>
@@ -284,9 +283,9 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
             
            
           </Grid>
-          <Grid xs={12} md={6} lg={10} boxShadow={1} sx={{m:5,p:4}}>
+          <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mb:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
            
-<Typography variant='h4' sx={{ mb: 0, color: 'secondary.main' , fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s'}}> College Admissions</Typography>
+            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> College Admissions </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
 Are you a student dreaming of attending your dream college or university? Our College Admissions service on the EdTech platform is designed to guide and support you through the complex and competitive college admissions process, ensuring you have the best chance of securing admission to your desired institutions.
@@ -311,12 +310,14 @@ Are you a student dreaming of attending your dream college or university? Our Co
 
         <Grid container  spacing={1}  sx={{ color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',p:8}} >
           <Grid xs={12}>
-            <Box sx={{ display: 'flex', justifyContent: 'center',p:4 }}>
-              <Typography variant="h5" sx={{color:'tertiary.main'}}>What we offer ?</Typography>
+            <Box sx={{ display: 'flex',flexDirection:'column', alignItems: 'center',p:4 }}>
+              <Typography variant="h5" sx={{ color: 'tertiary.main' }}>What we offer ?</Typography>
+      <Typography variant="body1" sx={{color:'secondary.main'}}>We offer the best content for you!</Typography>
+
 
             </Box>
           </Grid>
-          <Box sx={{display:'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'100px',left:'0px'}}>
+          <Box sx={{display:'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'130px',left:'0px'}}>
             <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #28c2dc, #3bcc86)',clipPath:'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
 
             </Box>
