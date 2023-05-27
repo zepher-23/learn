@@ -52,7 +52,7 @@ const [isHovered, setIsHovered] = useState(false);
     <Box  boxShadow={1} onMouseOver={handleCourseOver}  onMouseOut={handleMouseOut} 
          
       sx={{
-        minHeight: '20vh', margin: '10px', backgroundColor: '#fafafa', borderRadius: '5px', padding: '40px', color: 'black',
+        minHeight: '20vh', margin: '10px', backgroundColor: '#fafafa', borderRadius: '50px', padding:isMobile ? '20px': '40px', color: 'black',
         '&:hover': { boxShadow:'12',cursor:'pointer'}, transition:'0.2s'  }}>
       {children}
       </Box>
@@ -234,9 +234,9 @@ Transform your career prospects with our immersive programs, bridging academia a
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mt:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
             
               
-            <Box sx={{ display: 'flex', alignItems: 'center',overflowX:'hidden' }}>
-              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Internship Training </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Internship Training </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
@@ -255,8 +255,8 @@ Transform your career prospects with our immersive programs, bridging academia a
           </Grid>
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Skill Courses </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Skill Courses </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
@@ -276,8 +276,8 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
@@ -301,8 +301,8 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mb:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
            
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> College Admissions </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> College Admissions </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none': 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
