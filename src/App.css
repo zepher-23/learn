@@ -42,11 +42,19 @@
     
     transform: translateX(0px);
     opacity:1;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .clickMe{
-    transform: translateX(200px);
+    transform: translateX(100px);
     opacity:0;
-    z-index:-3;
+    /* z-index:-3; */
     transition: 0.1s ease-in-out;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+
+
+
 }

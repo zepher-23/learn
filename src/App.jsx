@@ -178,7 +178,7 @@ function App() {
       
       <Navbar />
 
-      <Grid container sx={{pt: '100px',height:'105vh', backgroundImage: 'linear-gradient(to right, #28c2dc, #a044ff)'}} spacing={3}>
+      <Grid container sx={{pt: '100px',height:'105vh', backgroundColor:'secondary.main'}} spacing={3}>
         <Grid sx={12} sm={12} md={7} lg={7}  >
           <Box boxShadow={0} sx={{p:4,backgroundColor:'#ffffff22',m: 12,mt:15,mb:4,borderRadius:'10px',display:'flex',flexDirection:'column',justifyContent:'start'}}>
           <Typography variant='h4' sx={{mb:2, color:'primary.text'}}>
@@ -188,7 +188,7 @@ function App() {
             
 Transform your career prospects with our immersive programs, bridging academia and industry, equipping you with high-demand skills and opening doors to abundant job opportunities.
             </Typography>
-             <Button boxShadow={2} variant='contained' sx={{display:'flex', p: 1,flexFlow:1,backgroundImage:'linear-gradient(to right,#a044ff,  #a044ff)',color:'white',  mt: 4, mb: 0, borderRadius: '10px',justifyContent:'center' }}>
+             <Button boxShadow={2} variant='contained' color="primary" sx={{display:'flex', p: 1,flexFlow:1,color:'white',  mt: 4, mb: 0, borderRadius: '10px',justifyContent:'center' }}>
             
  Explore Program
           
@@ -230,11 +230,16 @@ Transform your career prospects with our immersive programs, bridging academia a
      
       
       <Box sx={{ backgroundColor: 'white' }}>
-        <Grid container sx={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
+        <Grid container sx={{overflowX:'hidden',width:'100vw',display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mt:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
             
               
-            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Internship Training </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
+            <Box sx={{ display: 'flex', alignItems: 'center',overflowX:'hidden' }}>
+              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Internship Training </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+                <Typography sx={{ color: 'white' }}> Learn More</Typography>
+              </Box>
+            </Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
                 Are you a student or aspiring professional looking to kick-start your career? Our Internship Training program offers a unique opportunity to gain hands-on experience and develop essential skills in your chosen field.
@@ -249,7 +254,12 @@ Transform your career prospects with our immersive programs, bridging academia a
            
           </Grid>
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
-            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Skill Courses </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Skill Courses </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+                <Typography sx={{ color: 'white' }}> Learn More</Typography>
+              </Box>
+            </Box>
               <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
 Are you ready to acquire new skills and elevate your career? Our Skill Courses on the EdTech platform offer a wide range of courses designed to empower you with the knowledge and expertise you need to succeed in today's fast-paced world.
@@ -265,7 +275,12 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
           
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             
-            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> Project Guidance </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+                <Typography sx={{ color: 'white' }}> Learn More</Typography>
+              </Box>
+            </Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution
 
 </Typography>
@@ -285,7 +300,12 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
           </Grid>
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mb:5,p:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
            
-            <Box sx={{display:'flex',alignItems:'center'}}>  <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main',fontWeight:'700','&:hover':{color:'#3bcc86'},transition:'0.2s',flexGrow:1}}> College Admissions </Typography><Box className='clickMe' sx={{width:'150px',m:1,position:'relative', left:'40px',backgroundColor:'secondary.main',p:1,pr:2,clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)',display:'flex',justifyContent:'end'}} ><Typography  sx={{color:'white'}}> Learn More</Typography></Box></Box>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography variant='h4' sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> College Admissions </Typography>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: 'flex', justifyContent: 'end' }} >
+                <Typography sx={{ color: 'white' }}> Learn More</Typography>
+              </Box>
+            </Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
               <Typography variant='body1' sx={{color:'text.tertiary'}}>
 Are you a student dreaming of attending your dream college or university? Our College Admissions service on the EdTech platform is designed to guide and support you through the complex and competitive college admissions process, ensuring you have the best chance of securing admission to your desired institutions.
@@ -318,10 +338,10 @@ Are you a student dreaming of attending your dream college or university? Our Co
             </Box>
           </Grid>
           <Box sx={{display:'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'130px',left:'0px'}}>
-            <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #28c2dc, #3bcc86)',clipPath:'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
+            <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #2b3150, #28c2dc)',clipPath:'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
 
             </Box>
-            <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right,#3bcc86, #a044ff)',clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
+            <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #28c2dc,#2b3150)',clipPath: 'polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%)'}}>
               
             </Box>
           </Box>

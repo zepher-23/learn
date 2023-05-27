@@ -5,3 +5,6 @@ color:black;
 .nav-option:hover{
 color: #a044ff;
 }
+@media only screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+}

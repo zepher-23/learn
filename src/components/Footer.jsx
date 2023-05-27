@@ -21,7 +21,7 @@ import youtube from '../assets/images/youtube.png'
 const Footer = () => {
     return (
         <div>
-       <Box  sx={{ mt: 1,display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #28c2dc, #a044ff)' }}>
+       <Box  sx={{ mt: 1,display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #2b3150, #2b3150)' }}>
         
                 <Grid container spacing={1}>
                     <Grid xs={12} sm={12} md={12} lg={4}>
