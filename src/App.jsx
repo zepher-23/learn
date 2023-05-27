@@ -11,7 +11,7 @@ import Box from '@mui/material/Box'
 import Divider from "@mui/material/Divider"
 import Link from "@mui/material/Link"
 import Typography from '@mui/material/Typography';
-import { Button, CardActions, Grid, Hidden,Paper} from '@mui/material';
+import { Button, CardActions, Grid, Hidden,Paper, useMediaQuery} from '@mui/material';
 import { createTheme, ThemeProvider,responsiveFontSizes, styled } from '@mui/material/styles';
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -162,7 +162,7 @@ const InfoText = styled(Typography)(({ theme }) => ({
 
 function App() {
 
-
+const isMobile = useMediaQuery('(max-width:768px)')
 
  
   
@@ -178,9 +178,9 @@ function App() {
       
       <Navbar />
 
-      <Grid container sx={{pt: '100px',height:'105vh', backgroundColor:'secondary.main',display:'flex',flexDirection:'column',alignItems:'center'}} >
-        <Grid xs={12} sm={12} md={7} lg={7} >
-          <Box boxShadow={0} sx={{p:4,backgroundColor:'#ffffff22',m: 1,mt:15,mb:4,borderRadius:'10px',display:'flex',flexDirection:'column',justifyContent:'center'}}>
+      <Grid container sx={{pt: '100px',height:'105vh', backgroundColor:'secondary.main',display:'flex',flexDirection:'row',justifyContent:isMobile ?'center' :'space-between'}} >
+        <Grid xs={12} sm={12} md={7} lg={6} >
+          <Box boxShadow={0} sx={{p:4,backgroundColor:'#ffffff22',m:1,mt:15,mb:4,ml:isMobile ? 1: 8,borderRadius:'10px',display:'flex',flexDirection:'column'}}>
           <Typography variant='h4' sx={{mb:2, color:'primary.text'}}>
             Empowering Careers, Unleashing Potential
           </Typography>
@@ -199,7 +199,7 @@ Transform your career prospects with our immersive programs, bridging academia a
         </Grid>
         
        <Hidden lgDown>
-        <Grid item xs={0} md={12} lg={5} sx={{display:'flex',justifyContent:'end'}}>
+        <Grid item xs={0} md={12} lg={4} sx={{display:'flex',justifyContent:'end'}}>
           <img className='hero-png' src={learn1} style={{ width: '500px', margin: '30px',paddingRight:'50px'}} alt="Your Image" />
         </Grid>
       </Hidden>
