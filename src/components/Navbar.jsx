@@ -101,9 +101,9 @@ const [expanded, setExpanded] = useState(false)
             </Grid>
 
 
-            <Box sx={{ width: '100vw',height:'20px', backgroundColor: 'white', display: isMobile ? 'flex': 'none',position:'relative',justifyContent:'center',zIndex:100 }} onClick={handleExpand} >
+            <Box sx={{ width: '100vw', backgroundColor: 'white', display: isMobile ? 'flex': 'none',position:'relative',justifyContent:'center',zIndex:100 }} onClick={handleExpand} >
                 {
-                    expanded ? <KeyboardArrowUpIcon color="primary"/> : <KeyboardArrowDownIcon color="primary"/>
+                    expanded ? <KeyboardArrowUpIcon fontSize="large" color="primary"/> : <KeyboardArrowDownIcon fontSize="large" color="primary"/>
                 }
                 
 
