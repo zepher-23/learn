@@ -32,17 +32,17 @@ const Footer = () => {
         
         <Box sx={{ ml:isMobile ? 2: 14,mb:isMobile ? 0:4, display: 'flex', flexDirection: isMobile ? 'row' : 'column',height: isMobile ? '':'23vh', flexWrap: 'wrap' }}>
       
-          <Typography className='footer-option' variant='body2' p={1}>Web Development</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Fullstack Development</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Data Science</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>AI & ML</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Digital Marketing</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Python</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Java</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>C</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>C++</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>PHP</Typography>
-          <Typography className='footer-option' variant='body2' p={1}>Android</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Web Development</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Fullstack Development</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Data Science</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>AI & ML</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Digital Marketing</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Python</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Java</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>C</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>C++</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>PHP</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Android</Typography>
                         
                 </Box>
 
@@ -54,13 +54,13 @@ const Footer = () => {
                         </Container>
                          <Box sx={{ ml:isMobile ? 2: 3,mb:4, display: 'flex', flexDirection:isMobile ? 'row': 'column',height:isMobile ? '':'23vh', flexWrap: 'wrap' }}>
        
-                            <Typography className='footer-option' variant='body2' p={1}>How it Works</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>About Us</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>Internship Training</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>Skill Courses</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>Project Guidance</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>College Admissions</Typography>
-                            <Typography className='footer-option' variant='body2' p={1}>Contact Us</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>How it Works</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>About Us</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Internship Training</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Skill Courses</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Project Guidance</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>College Admissions</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Contact Us</Typography>
          
                         
                 </Box>
@@ -70,12 +70,12 @@ const Footer = () => {
                         <Box sx={{mt:isMobile ? 2:6,mr:isMobile ? 2:4,ml:2, display:'flex',flexDirection:'column',alignItems:isMobile ? 'center':'start'}}>
                             <img src={logo} style={{ width: '200px' }} />
                             <Typography sx={{py:2,pr:isMobile ? 0 :3,textAlign:'justify'}} variant="body2">Unleash your potential by learning invaluable skills from India's foremost experts, filling the educational gaps left by traditional schooling, all through our cutting-edge EdTech platform.</Typography>
-                            <Box sx={{mb:3, display: 'flex', flexDirection: 'row',justifyContent:'space-between' }}>
-                                <img className="social" src={facebook} style={{ width: '30px',padding:'10px' }} />
-                                <img className="social" src={instagram} style={{ width: '30px',padding:'10px' }} />
-                                <img className="social" src={linkedin} style={{ width: '30px',padding:'10px'}} />
-                                <img className="social" src={twitter} style={{ width: '30px',padding:'10px' }} />
-                                <img className="social" src={youtube} style={{ width: '30px',padding:'10px'}} />
+                            <Box sx={{m:1,mb:3, display: 'flex', flexDirection: 'row',justifyContent:'space-between' }}>
+                                <img className="social" src={facebook} style={{ width: isMobile ?'40px' :'30px',padding:'10px' }} />
+                                <img className="social" src={instagram} style={{ width:isMobile ?'40px' : '30px',padding:'10px' }} />
+                                <img className="social" src={linkedin} style={{ width:isMobile ?'40px' : '30px',padding:'10px'}} />
+                                <img className="social" src={twitter} style={{ width:isMobile ?'40px' : '30px',padding:'10px' }} />
+                                <img className="social" src={youtube} style={{ width:isMobile ?'40px' : '30px',padding:'10px'}} />
                                 
                             
                         </Box>
@@ -87,7 +87,7 @@ const Footer = () => {
                 </Grid>
 
  <Box sx={{px:isMobile ? 2:12, backgroundColor: 'primary.main', minHeight: '40px',display:'flex',flexDirection:isMobile ?'column' :'row',justifyContent:'space-between',alignItems:'center' }}>
-                    <Typography variant={isMobile ? 'subtitle1' :"body2"}pt={1}>
+                    <Typography variant={isMobile ? 'subtitle1' :"body2"} pt={isMobile ? 1:0}>
                         Copyright &copy; 2023 - ZephyrLearn.in  
 
                     </Typography>

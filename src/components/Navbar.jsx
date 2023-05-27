@@ -52,25 +52,25 @@ const [expanded, setExpanded] = useState(false)
            
         <Box  sx={{ width: '100vw', zIndex: 1000, position: 'fixed' }}>
             
-      <Grid boxShadow={1} container sx={{position:'relative',width:'100vw',m:0, p:0, backgroundColor: 'white',display:'flex',flexGrow:1,flexDirection:'row',alignItems:'center', py:scrollValue>150 ? 1 : 1, height:scrollValue>150 ? '80px' : '100px',transition:'0.5s',zIndex:2}}  spacing={1} >
-                <Grid  xs={6} sm={6} md={scrollValue>150 ? 2 : 9} >
+      <Grid boxShadow={1} container sx={{position:'relative',width:'100vw',m:0, p:0, backgroundColor: 'white',display:'flex',flexGrow:1,flexDirection:'row',alignItems:'center', py:scrollValue>150 ? 0 : 1, height:scrollValue>150 ? '80px' : '100px',transition:'0.2s',zIndex:2}}  spacing={1} >
+                <Grid  xs={6} sm={6} md={2} >
                     <Item sx={{ml:isMobile ? 2:6,transition:'0.2s'}}>
                         <img src={logo} style={{width:isMobile ? (scrollValue>150 ? '80px' : '100px') :scrollValue>150 ? '100px':'140px',transition:'0.5s'}} />
                     </Item>
                     
                 </Grid>
-                <Grid xs={12} md={7} sx={{my:0,display:isMobile ? "none" : (scrollValue>150 ? 'flex' : 'none'),transition:'0.5s'}}  >
-                    <Item sx={{ display:'flex', flexDirection: 'row', flexGrow:1,justifyContent:'center',p:2,backgroundColor:'white' }}>
-                        <Button className="nav-option" sx={{p:2,height:'30px',fontSize:isMobile ? '10px':''}}>
+                <Grid xs={12} md={7} sx={{my:0,display:isMobile ? "none" : 'flex',transition:'0.5s'}}  >
+                    <Item sx={{ display:'flex', flexDirection: 'row', flexGrow:1,justifyContent:'center',p:2,backgroundColor:'white',transition:'0.5s',transform:scrollValue>150 ? 'translateY(0px)':'translateY(-100px)' }}>
+                        <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
                             Internship Training
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
+                        <Button color="secondary"  sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
                             Skill Courses
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
+                        <Button  color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
                             Project Guidance
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
+                        <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
                             College Admisson
                         </Button>
                      
@@ -112,16 +112,16 @@ const [expanded, setExpanded] = useState(false)
 
             
             <Grid xs={12} sx={{ display: isMobile ? 'flex' : 'none', flexDirection: 'column',  }}>
-                        <Button className="nav-option" sx={{p:2,height:'40px'}}>
+                        <Button sx={{p:2,height:'40px'}}>
                             Internship Training
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'40px'}} >
+                        <Button  sx={{p:2,height:'40px'}} >
                             Skill Courses
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'40px'}} >
+                        <Button  sx={{p:2,height:'40px'}} >
                             Project Guidance
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'40px'}}>
+                        <Button sx={{p:2,height:'40px'}}>
                             College Admisson
                         </Button>
                 </Grid></Grid>
