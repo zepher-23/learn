@@ -112,16 +112,16 @@ const [expanded, setExpanded] = useState(false)
 
             
             <Grid xs={12} sx={{ display: isMobile ? 'flex' : 'none', flexDirection: 'column',  }}>
-                        <Button className="nav-option" sx={{p:2,height:'30px'}}>
+                        <Button className="nav-option" sx={{p:2,height:'40px'}}>
                             Internship Training
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px'}} >
+                        <Button className="nav-option" sx={{p:2,height:'40px'}} >
                             Skill Courses
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px'}} >
+                        <Button className="nav-option" sx={{p:2,height:'40px'}} >
                             Project Guidance
                         </Button>
-                        <Button className="nav-option" sx={{p:2,height:'30px'}}>
+                        <Button className="nav-option" sx={{p:2,height:'40px'}}>
                             College Admisson
                         </Button>
                 </Grid></Grid>
