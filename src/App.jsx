@@ -125,13 +125,12 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
   }),
 );
 
-const BenifitCard = styled(Box)(({ theme }) => ({
-
-  height: '50vh',
+const BenifitCard = styled(Box)(({ theme,isMobile }) => ({
+  height: isMobile ? '20vh' :'50vh',
   borderRadius: '5px',
   boxShadow: theme.shadows[2],
   margin: '10px',
-  marginTop:'70px',
+  marginTop: isMobile ? '20px':'70px',
   backgroundColor: 'white'
   
 }))
@@ -241,7 +240,7 @@ Transform your career prospects with our immersive programs, bridging academia a
               </Box>
             </Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
-              <Typography variant='body1' sx={{color:'text.tertiary',textAlign:"justify"}}>
+              <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:"justify"}}>
                 Are you a student or aspiring professional looking to kick-start your career? Our Internship Training program offers a unique opportunity to gain hands-on experience and develop essential skills in your chosen field.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'row',justifyContent:'start', flexWrap: 'wrap' }}>
@@ -261,7 +260,7 @@ Transform your career prospects with our immersive programs, bridging academia a
               </Box>
             </Box>
               <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
-              <Typography variant='body1' sx={{color:'text.tertiary',textAlign:'justify'}}>
+              <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you ready to acquire new skills and elevate your career? Our Skill Courses on the EdTech platform offer a wide range of courses designed to empower you with the knowledge and expertise you need to succeed in today's fast-paced world.
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'row',justifyContent:'start', flexWrap: 'wrap' }}>
@@ -284,7 +283,7 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution
 
 </Typography>
-              <Typography variant='body1' sx={{color:'text.tertiary',textAlign:'justify'}}>
+              <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you looking to turn your innovative ideas into tangible projects? Our Project Guidance service on the EdTech platform offers expert support and guidance to help you execute your projects effectively and achieve remarkable results.
 
               </Typography> 
@@ -307,7 +306,7 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
               </Box>
             </Box>
               <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
-              <Typography variant='body1' sx={{color:'text.tertiary',textAlign:'justify'}}>
+              <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you a student dreaming of attending your dream college or university? Our College Admissions service on the EdTech platform is designed to guide and support you through the complex and competitive college admissions process, ensuring you have the best chance of securing admission to your desired institutions.
               </Typography>   
               <Box sx={{ display: 'flex', flexDirection: 'row',justifyContent:'start', flexWrap: 'wrap' }}>
@@ -327,18 +326,17 @@ Are you a student dreaming of attending your dream college or university? Our Co
 
       
       <Box >
-
-        <Grid container    sx={{ color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',p:isMobile ? 1:8}} >
-          <Grid xs={12}>
-            <Box sx={{ display: 'flex',flexDirection:'column', alignItems: 'center',p:4,px:0 }}>
+  <Box sx={{ display: 'flex',flexDirection:'column', alignItems: 'center',p:4,px:0 }}>
               <Typography variant="h5" sx={{ color: 'tertiary.main' }}>What we offer ?</Typography>
       <Typography variant="body1" sx={{color:'secondary.main'}}>We offer the best content for you!</Typography>
 
 
-            </Box>
-          </Grid>
+        </Box>
+        
 
-          <Box sx={{display:'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'130px',left:'0px'}}>
+        <Grid container    sx={{backgroundColor:isMobile ? 'secondary.main' :'', color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',p:isMobile ? 5:2,px:isMobile ? 1 : 8}} >
+         
+          <Box sx={{display:isMobile ? 'none' :'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'10px',left:'0px'}}>
             <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #2b3150, #28c2dc)',clipPath:isMobile ? "":'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
 
             </Box>
@@ -347,26 +345,26 @@ Are you a student dreaming of attending your dream college or university? Our Co
             </Box>
           </Box>
           
-          <Grid xs={12} lg={3}>
+          <Grid xs={12} lg={3} sx={{}}>
             
-            <BenifitCard sx={{}} >
+            <BenifitCard isMobile={isMobile} sx={{}} >
               
 
             </BenifitCard>
           </Grid>
           <Grid xs={12} lg={3}>
-            <BenifitCard>
+            <BenifitCard isMobile={isMobile}>
 
             </BenifitCard>
 
           </Grid>
           <Grid xs={12} lg={3}>
-            <BenifitCard >
+            <BenifitCard isMobile={isMobile} >
 
             </BenifitCard>
           </Grid>
           <Grid xs={12} lg={3}>
-            <BenifitCard >
+            <BenifitCard  isMobile={isMobile}>
 
             </BenifitCard>
 
