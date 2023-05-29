@@ -426,7 +426,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
       </Box>
       <Box sx={{ p: 4, px: isMobile ? 3:8,m:1, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'center', alignItems: 'center',backgroundColor:'secondary.main' }}>
         <img src={cta } alt="" style={{width:isMobile ? '60px':'100px'}}/>
-        <Typography variant={isMobile ? 'h6':'h5'} sx={{maxWidth:isMobile?'100%':'70%', p:isMobile?3: 3,px:isMobile ? 0:3, fontWeight: 600, color: 'primary.text',textAlign:'justify' }}>
+        <Typography variant={isMobile ? 'body1' : 'h5'} sx={{ maxWidth: isMobile ? '100%' : '65%', p: isMobile ? 3 : 3, px: isMobile ? 0 : 5, fontWeight: isMobile ? 300 : 600, color: 'primary.text',textAlign:isMobile?'justify':'start' }}>
           Elevate your learning with our innovative EdTech platform. Discover, engage, and excel. Join us today!
         </Typography>
         <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'200px',color:'white'}}>call us</Button>
