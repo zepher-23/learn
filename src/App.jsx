@@ -12,7 +12,7 @@ import Divider from "@mui/material/Divider"
 import Link from "@mui/material/Link"
 import Typography from '@mui/material/Typography';
 import { Button, CardActions, Grid, Hidden,Paper, useMediaQuery} from '@mui/material';
-import { createTheme, ThemeProvider,responsiveFontSizes, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -28,6 +28,9 @@ import EventIcon from '@mui/icons-material/Event';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import university from './assets/images/university.png'
+import checked from './assets/images/checked.png'
+import Testimonial from './components/Testimonial'
+import cta from './assets/images/cta.png'
 
 const json = jsonData
 
@@ -126,12 +129,15 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 const BenifitCard = styled(Box)(({ theme,isMobile }) => ({
-  height: isMobile ? '20vh' :'50vh',
+  minHeight: isMobile ? '20vh' : '30vh',
+  height: 'auto',
+  flexGrow:'1',
   borderRadius: '5px',
-  boxShadow: theme.shadows[2],
+  boxShadow: theme.shadows[1],
   margin: '10px',
-  marginTop: isMobile ? '20px':'70px',
-  backgroundColor: 'white'
+
+  padding:'10px',
+  backgroundColor: '#ffffff11'
   
 }))
 const ServiceInfo = styled(Box)(({ theme }) => ({
@@ -161,17 +167,7 @@ const InfoText = styled(Typography)(({ theme }) => ({
 
 function App() {
 
-const isMobile = useMediaQuery('(max-width:768px)')
-
- 
-  
- 
-
-
-  
-  
-
-
+  const isMobile = useMediaQuery('(max-width:768px)');
   return (
     <>
       
@@ -234,12 +230,14 @@ Transform your career prospects with our immersive programs, bridging academia a
             
               
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Internship Training </Typography>
+           <Box sx={{display:'flex',flexDirection:'column',flexGrow:1}}>  <Typography variant={isMobile ? 'h5' : 'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Internship Training </Typography>
+                            <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
+</Box> 
               <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
+                
               </Box>
             </Box>
-              <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Gain Real-World Experience in Your Field</Typography>
               <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:"justify"}}>
                 Are you a student or aspiring professional looking to kick-start your career? Our Internship Training program offers a unique opportunity to gain hands-on experience and develop essential skills in your chosen field.
               </Typography>
@@ -254,12 +252,13 @@ Transform your career prospects with our immersive programs, bridging academia a
           </Grid>
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:isMobile ? 2:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Skill Courses </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
+           <Box sx={{display:'flex',flexDirection:'column',flexGrow:1}}> <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Skill Courses </Typography>
+                           <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
+              </Box>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
-              <Typography variant='body2' sx={{mb:2,color:'primary.light'}}> Unlock Your Potential and Master In-Demand Skills</Typography>
               <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you ready to acquire new skills and elevate your career? Our Skill Courses on the EdTech platform offer a wide range of courses designed to empower you with the knowledge and expertise you need to succeed in today's fast-paced world.
               </Typography>
@@ -275,14 +274,14 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:isMobile ? 2:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
+            <Box sx={{display:'flex',flexDirection:'column',flexGrow:1}}>  <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
+            <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution </Typography>
+              </Box>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
-              <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Expert Support for Successful Project Execution
-
-</Typography>
+             
               <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you looking to turn your innovative ideas into tangible projects? Our Project Guidance service on the EdTech platform offers expert support and guidance to help you execute your projects effectively and achieve remarkable results.
 
@@ -300,12 +299,13 @@ Are you looking to turn your innovative ideas into tangible projects? Our Projec
           <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,mb:5,p:isMobile ? 2:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}}>
            
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> College Admissions </Typography>
-              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display:isMobile ? 'none': 'flex', justifyContent: 'end' }} >
+           <Box sx={{display:'flex',flexDirection:'column',flexGrow:1}}>  <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> College Admissions </Typography>
+                           <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
+              </Box>
+              <Box className='clickMe' sx={{ width: '150px', m: 1, position: 'relative', left: '40px', backgroundColor: 'secondary.main', p: 1, pr: 2, clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 19% 100%)', display: isMobile ? 'none' : 'flex', justifyContent: 'end' }} >
                 <Typography sx={{ color: 'white' }}> Learn More</Typography>
               </Box>
             </Box>
-              <Typography variant='body2' sx={{mb:2, color:'primary.light'}}> Your Pathway to Higher Education Success</Typography>
               <Typography variant={isMobile?'body2':'body1'} sx={{color:'text.tertiary',textAlign:'justify'}}>
 Are you a student dreaming of attending your dream college or university? Our College Admissions service on the EdTech platform is designed to guide and support you through the complex and competitive college admissions process, ensuring you have the best chance of securing admission to your desired institutions.
               </Typography>   
@@ -334,9 +334,9 @@ Are you a student dreaming of attending your dream college or university? Our Co
         </Box>
         
 
-        <Grid container    sx={{backgroundColor:isMobile ? 'secondary.main' :'', color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',p:isMobile ? 5:2,px:isMobile ? 1 : 8}} >
+        <Grid container    sx={{backgroundColor:isMobile ? 'secondary.main' :'', color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center',p:isMobile ? 5:2,px:isMobile ? 1 : 3}} >
          
-          <Box sx={{display:isMobile ? 'none' :'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,marginTop:'10px',left:'0px'}}>
+          <Box sx={{display:isMobile ? 'none' :'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,left:'0px'}}>
             <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #2b3150, #28c2dc)',clipPath:isMobile ? "":'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
 
             </Box>
@@ -345,26 +345,73 @@ Are you a student dreaming of attending your dream college or university? Our Co
             </Box>
           </Box>
           
-          <Grid xs={12} lg={3} sx={{}}>
-            
+          <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
+             <Box sx={{p:2,pb:1}}><Typography variant='body2' sx={{color:'tertiary.main'}}> You get</Typography>
+            <Typography variant='h5' sx={{ color: 'primary.text', fontWeight: 600 }}>1 on 1 Mentors</Typography></Box> 
+           
             <BenifitCard isMobile={isMobile} sx={{}} >
+             
+             <Box sx={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Online / Offline Classes</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Live Doubt Resolution</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Learn to solve real world problems</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Structured Course</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Industry Expert Coaching</Typography></Box>
+              
+              </Box>
               
 
             </BenifitCard>
           </Grid>
-          <Grid xs={12} lg={3}>
+          <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
+          <Box sx={{p:2,pb:1}}><Typography variant='body2' sx={{color:'tertiary.main'}}> You get</Typography>
+            <Typography variant='h5' sx={{ color: 'primary.text', fontWeight: 600 }}>Lifetime Placement Support</Typography></Box> 
             <BenifitCard isMobile={isMobile}>
+              
+             
+             <Box sx={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Mock Interviews</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Live Feedback Sessions</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Resume Profiling</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Career Consultation</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Career Guidance </Typography></Box>
+              
+              </Box>
 
             </BenifitCard>
 
           </Grid>
-          <Grid xs={12} lg={3}>
-            <BenifitCard isMobile={isMobile} >
+          <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
+            <Box sx={{p:2,pb:1}}><Typography variant='body2' sx={{color:'tertiary.main'}}> You get</Typography>
+            <Typography variant='h5' sx={{ color: 'primary.text', fontWeight: 600 }}>Structured Learning </Typography></Box> 
+            <BenifitCard isMobile={isMobile}>
+              
+             
+             <Box sx={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Easy to Understand</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Doubt resolutions from industry experts</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Easy Paced Learning</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Covers all levels of learning Pace</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Online / Offline Classes</Typography></Box>
+              
+              </Box>
 
             </BenifitCard>
           </Grid>
-          <Grid xs={12} lg={3}>
-            <BenifitCard  isMobile={isMobile}>
+          <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
+            <Box sx={{p:2,pb:1}}><Typography variant='body2' sx={{color:'tertiary.main'}}> You get</Typography>
+            <Typography variant='h5' sx={{ color: 'primary.text', fontWeight: 600 }}>1 on 1 Mentors</Typography></Box> 
+            <BenifitCard isMobile={isMobile}>
+              
+             
+             <Box sx={{display:'flex',flexDirection:'row',flexWrap:'wrap'}}>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Online / Offline Classes</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Live Doubt Resolution</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Learn to solve real world problems</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Online / Offline Classes</Typography></Box>
+              <Box sx={{display:'flex',flexDirection:'row'}}><img src={checked} style={{ width: '20px',height:'20px',paddingTop:'7px'}} /><Typography variant='body2' sx={{p:1,color:'white'}}>Online / Offline Classes</Typography></Box>
+              
+              </Box>
 
             </BenifitCard>
 
@@ -373,20 +420,16 @@ Are you a student dreaming of attending your dream college or university? Our Co
         </Grid>
 
       </Box>
-      <Box sx={{ height: '100vh',color:'black' }}>
-        Features section
-
+      
+      <Box sx={{mt:8}}>
+        <Testimonial isMobile={isMobile } />
       </Box>
-      <Box sx={{ height: '100vh',color:'black' }}>
-        testimonials section
-
-      </Box>
-      <Box sx={{ height: '100vh',color:'black' }}>
-        pricing section
-
-      </Box>
-      <Box sx={{ height: '100vh',color:'black' }}>
-         call to action
+      <Box sx={{p:4,px:8, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'space-evenly', alignItems: 'center',backgroundColor:'tertiary.main' }}>
+        <img src={cta } alt="" style={{width:isMobile ? '40px':'80px'}}/>
+        <Typography variant={isMobile ? 'h5':'h4'} sx={{ p: 2, fontWeight: 600, color: 'text.primary' }}>
+          CALL TO ACTION
+        </Typography>
+        <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'100px',color:'white'}}>Know More</Button>
 
       </Box>
 

@@ -20,6 +20,7 @@ const theme = createTheme({
     },
     secondary: {
       main: '#2b3150',
+      glass:'#2b3150aa'
     },
     tertiary: {
       main:'#3bcc86'
@@ -48,6 +49,9 @@ const theme = createTheme({
     },
     p: {
       fontWeight:'400'
+    },
+    body2: {
+      fontWeight:'300'
     }
       
   },
