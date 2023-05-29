@@ -424,12 +424,12 @@ Are you a student dreaming of attending your dream college or university? Our Co
       <Box sx={{mt:8}}>
         <Testimonial isMobile={isMobile } />
       </Box>
-      <Box sx={{p:4,px:8, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'space-evenly', alignItems: 'center',backgroundColor:'tertiary.main' }}>
-        <img src={cta } alt="" style={{width:isMobile ? '40px':'80px'}}/>
-        <Typography variant={isMobile ? 'h5':'h4'} sx={{ p: 2, fontWeight: 600, color: 'text.primary' }}>
-          CALL TO ACTION
+      <Box sx={{ p: 4, px: isMobile ? 3:8,m:1, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'center', alignItems: 'center',backgroundColor:'secondary.main' }}>
+        <img src={cta } alt="" style={{width:isMobile ? '60px':'100px'}}/>
+        <Typography variant={isMobile ? 'h6':'h5'} sx={{maxWidth:isMobile?'100%':'70%', p:isMobile?3: 3,px:isMobile ? 0:3, fontWeight: 600, color: 'primary.text',textAlign:'justify' }}>
+          Elevate your learning with our innovative EdTech platform. Discover, engage, and excel. Join us today!
         </Typography>
-        <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'100px',color:'white'}}>Know More</Button>
+        <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'200px',color:'white'}}>call us</Button>
 
       </Box>
 
