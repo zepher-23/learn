@@ -51,6 +51,14 @@
     transition: 0.1s ease-in-out;
 }
 
+.fab-icon{
+    cursor: pointer;
+    
+}
+
+.fab-icon:hover{
+    transform:scale(1.2)
+}
 
 @media only screen and (max-width: 768px) {
     /* Styles for mobile devices */

@@ -11,7 +11,7 @@ import Box from '@mui/material/Box'
 import Divider from "@mui/material/Divider"
 import Link from "@mui/material/Link"
 import Typography from '@mui/material/Typography';
-import { Button, CardActions, Grid, Hidden,Paper, useMediaQuery} from '@mui/material';
+import { Button, CardActions, Grid, Hidden,Paper, useMediaQuery,Fab} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
@@ -26,6 +26,9 @@ import jsonData from './assets/javascript/courseData.json'
 import learn1 from './assets/images/learn1.png'
 import EventIcon from '@mui/icons-material/Event';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import AddIcon from '@mui/icons-material/Add';
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
+import CallIcon from '@mui/icons-material/Call';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import university from './assets/images/university.png'
 import checked from './assets/images/checked.png'
@@ -168,6 +171,15 @@ const InfoText = styled(Typography)(({ theme }) => ({
 function App() {
 
   const isMobile = useMediaQuery('(max-width:768px)');
+  const [contactOpen, setContactOpen] = useState(false);
+  const handleContactOpen = () => {
+    if (contactOpen) {
+      setContactOpen(false);
+    }
+    else {
+      setContactOpen(true);
+    }
+  }
   return (
     <>
       
@@ -434,7 +446,16 @@ Are you a student dreaming of attending your dream college or university? Our Co
       </Box>
 
 
-     <Footer/>
+      <Footer />
+      <Box sx={{ display: 'flex',flexDirection:'column',alignItems:'center', position: 'fixed', bottom: '30px', right: '30px' }}>
+        <Box boxShadow={2} sx={{display:'flex',flexDirection:'column',justifyContent:'start',alignItems:'center', width:contactOpen ? '55px':'50px', height: contactOpen ? '170px' : '46px', backgroundColor: 'background.lightest', mb: 2, borderRadius: '50px', position: 'absolute', bottom: '-10px', transition: '0.2s ease',overflow:'hidden' }}>
+          <CallIcon className="fab-icon" sx={{color:'primary.main',p:1,pt:3,width:'30px',height:'30px',transition:'0.2s'}} />
+          <WhatsAppIcon className="fab-icon" sx={{color:'tertiary.main', p:1,pt:2,width:'30px',height:'30px',transition:'0.2s'}} />
+        </Box>
+         <Fab  color="secondary" aria-label="add"  onClick={handleContactOpen} >
+        <PermPhoneMsgIcon />
+      </Fab>
+      </Box>
       
     </>
   )
