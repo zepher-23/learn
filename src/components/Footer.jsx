@@ -30,7 +30,7 @@ const Footer = () => {
                         <Container sx={{ mt: 4, p: 2, display: 'flex', flexDirection: 'row' }} >
                     <Typography variant='h6' sx={{ml:isMobile ? 1:11}}>Courses & Internship Training</Typography></Container>
         
-        <Box sx={{ ml:isMobile ? 2: 14,mb:isMobile ? 0:4, display: 'flex', flexDirection: isMobile ? 'row' : 'column',height: isMobile ? '':'23vh', flexWrap: 'wrap' }}>
+        <Box sx={{ ml:isMobile ? 2: 14,mb:isMobile ? 0:4, display: 'flex', flexDirection: isMobile ? 'row' : 'column',height: isMobile ? 'auto':'23vh', flexWrap: 'wrap' }}>
       
           <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Web Development</Typography>
           <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Fullstack Development</Typography>
@@ -52,7 +52,7 @@ const Footer = () => {
                             <Typography variant='h6'sx = {{ml:isMobile ? 1 :0}}>Sitemap </Typography>
 
                         </Container>
-                         <Box sx={{ ml:isMobile ? 2: 3,mb:4, display: 'flex', flexDirection:isMobile ? 'row': 'column',height:isMobile ? '':'23vh', flexWrap: 'wrap' }}>
+                         <Box sx={{ ml:isMobile ? 2: 3,mb:4, display: 'flex', flexDirection:isMobile ? 'row': 'column',height:isMobile ? 'auto':'23vh', flexWrap: 'wrap' }}>
        
                             <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>How it Works</Typography>
                             <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>About Us</Typography>
@@ -69,7 +69,7 @@ const Footer = () => {
                     <Grid xs={12} sm={12} md={12} lg={6}>
                         <Box sx={{mt:isMobile ? 2:6,mr:isMobile ? 2:4,ml:2, display:'flex',flexDirection:'column',alignItems:isMobile ? 'center':'start'}}>
                             <img src={logo} style={{ width: '200px' }} />
-                            <Typography sx={{py:2,pr:isMobile ? 0 :3,textAlign:'justify'}} variant="body2">Unleash your potential by learning invaluable skills from India's foremost experts, filling the educational gaps left by traditional schooling, all through our cutting-edge EdTech platform.</Typography>
+                            <Typography sx={{py:2,pr:isMobile ? 0 :3,textAlign:'justify',color:'white'}} variant="body2">Unleash your potential by learning invaluable skills from India's foremost experts, filling the educational gaps left by traditional schooling, all through our cutting-edge EdTech platform.</Typography>
                             <Box sx={{m:1,mb:3, display: 'flex', flexDirection: 'row',justifyContent:'space-between' }}>
                                 <img className="social" src={facebook} style={{ width: isMobile ?'40px' :'30px',padding:'10px' }} />
                                 <img className="social" src={instagram} style={{ width:isMobile ?'40px' : '30px',padding:'10px' }} />
