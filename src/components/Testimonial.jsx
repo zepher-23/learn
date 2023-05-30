@@ -12,7 +12,7 @@ const Testimonial = (isMobile) => {
 
                 </Typography>
             </Box>
-            <Grid container sx={{  width: '100%', backgroundColor: 'secondary.main',display:'flex',flexDirection:'row',flexWrap:'wrap',p:2,justifyContent:'center' }}>
+            <Grid container sx={{  width: '100%',display:'flex',flexDirection:'row',flexWrap:'wrap',p:2,justifyContent:'center' }}>
                 <Grid xs={12} lg={4}  sx={{backgroundColor:'background.light',height:'20vh',borderRadius:'10px',m:1}}>
 
                 </Grid>
