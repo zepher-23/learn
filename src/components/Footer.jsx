@@ -28,39 +28,39 @@ const Footer = () => {
                 <Grid container >
                     <Grid xs={12} lg={4}>
                         <Container sx={{ mt: 4, p: 2, display: 'flex', flexDirection: 'row' }} >
-                    <Typography variant='h6' sx={{ml:isMobile ? 1:11}}>Courses & Internship Training</Typography></Container>
+                    <Typography variant='h6' sx={{ml:isMobile ? 1:11,color:'white'}}>Courses & Internship Training</Typography></Container>
         
         <Box sx={{ ml:isMobile ? 2: 14,mb:isMobile ? 0:4, display: 'flex', flexDirection: isMobile ? 'row' : 'column',height: isMobile ? 'auto':'23vh', flexWrap: 'wrap' }}>
       
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Web Development</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Fullstack Development</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Data Science</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>AI & ML</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Digital Marketing</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Python</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Java</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>C</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>C++</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>PHP</Typography>
-          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Android</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Web Development</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Fullstack Development</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Data Science</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>AI & ML</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Digital Marketing</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Python</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Java</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>C</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>C++</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>PHP</Typography>
+          <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Android</Typography>
                         
                 </Box>
 
                     </Grid>
                     <Grid xs={12} sm={12} md={12} lg={2}>
                         <Container sx={{mt:isMobile ?1: 4, p: 2}}>
-                            <Typography variant='h6'sx = {{ml:isMobile ? 1 :0}}>Sitemap </Typography>
+                            <Typography variant='h6'sx = {{ml:isMobile ? 1 :0,color:'white'}}>Sitemap </Typography>
 
                         </Container>
                          <Box sx={{ ml:isMobile ? 2: 3,mb:4, display: 'flex', flexDirection:isMobile ? 'row': 'column',height:isMobile ? 'auto':'23vh', flexWrap: 'wrap' }}>
        
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>How it Works</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>About Us</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Internship Training</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Skill Courses</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Project Guidance</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>College Admissions</Typography>
-                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0}>Contact Us</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>How it Works</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>About Us</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Internship Training</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Skill Courses</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Project Guidance</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>College Admissions</Typography>
+                            <Typography className='footer-option' variant='body2' p={isMobile ? 1:0} sx={{color:'white'}}>Contact Us</Typography>
          
                         
                 </Box>
@@ -87,7 +87,7 @@ const Footer = () => {
                 </Grid>
 
  <Box sx={{px:isMobile ? 2:12, backgroundColor: 'primary.main', minHeight: '40px',display:'flex',flexDirection:isMobile ?'column' :'row',justifyContent:'space-between',alignItems:'center' }}>
-                    <Typography variant={isMobile ? 'subtitle1' :"body2"} pt={isMobile ? 1:0}>
+                    <Typography variant={isMobile ? 'subtitle1' :"body2"} pt={isMobile ? 1:0} sx={{color:'white'}}>
                         Copyright &copy; 2023 - ZephyrLearn.in  
 
                     </Typography>
