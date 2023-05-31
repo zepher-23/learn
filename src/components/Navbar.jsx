@@ -113,7 +113,7 @@ const [expanded, setExpanded] = useState(false)
 
             
                 <Grid xs={12} sx={{  }}>
-                    <Box sx={{display: isMobile ? 'flex' : 'none', flexDirection: 'column'}}>
+                    <Box sx={{display: isMobile ? 'flex' : 'none', flexDirection: 'column',py:2}}>
                         <Button sx={{p:2,height:'40px'}}>
                             Internship Training
                         </Button>
