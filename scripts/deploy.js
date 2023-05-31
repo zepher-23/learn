@@ -3,15 +3,15 @@ import fs from 'fs';
 
 // Read the package.json file
 const packageJson = fs.readFileSync('./package.json');
-const { commitCount } = JSON.parse(packageJson);
+const { commit_count } = JSON.parse(packageJson);
 
 // Increment the commit count
-const newCommitCount = commitCount + 1;
+const newCommitCount = commit_count + 1;
 
 // Update the package.json file with the new commit count
 const updatedPackageJson = {
   ...JSON.parse(packageJson),
-  commitCount: newCommitCount
+  commit_count: newCommitCount
 };
 fs.writeFileSync('./package.json', JSON.stringify(updatedPackageJson, null, 2));
 
