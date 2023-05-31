@@ -46,11 +46,11 @@ const ContactForm = ({isMobile}) => {
         <Box sx={{ backgroundColor: 'secondary.main', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row' }}>
             <Typography variant="h6" sx={{display:isMobile ?'flex':'none',justifyContent:'center'}}>Contact</Typography>
                 
-        <Box  boxShadow={isMobile ? 0:0} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,}} >
+        <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,}} >
           <Map isMobile={isMobile}/>
             </Box>
             
-            <Box boxShadow={2} sx={{p:isMobile ? 1:2, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
+            <Box boxShadow={3} sx={{p:isMobile ? 1:2, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
                
                
                 <Box sx={{display:'flex',flexDirection:isMobile?'column':'row',justifyContent:'start'}}>
@@ -97,11 +97,11 @@ const ContactForm = ({isMobile}) => {
                 <Box sx={{display:'flex'}}> 
                         <CustomTextField size="small" label="Write to us..." type="text" variant="outlined" multiline  rows={4}   sx={{width:isMobile ?"auto" : "100%",color:'white',flexGrow:1}} > </CustomTextField>
                 </Box>
-                <Box sx={{mt:3, display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-evenly' }}>
-                <Button  size="large" color="tertiary" variant="contained" sx={{m:2}}>
+                <Box sx={{mt:1, display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: isMobile ? 'center':'start' }}>
+                <Button  size="large" color="tertiary" variant="contained" sx={{m:isMobile? 2 :1}}>
                 Schedule a Call back ?
                 </Button>
-                <Button size="large" color="primary" variant="contained" sx={{m:2,color:'white'}}>
+                <Button size="large" color="primary" variant="contained" sx={{m:isMobile? 2 :1,color:'white'}}>
                 Send us a Mail ? 
        </Button>
 
