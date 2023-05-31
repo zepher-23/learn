@@ -43,10 +43,10 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
 const ContactForm = ({isMobile}) => {
     return (
         
-        <Box sx={{ backgroundColor: 'secondary.main', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row' }}>
+        <Box sx={{ backgroundColor: 'secondary.dark', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row',mb:'1px' }}>
             <Typography variant="h6" sx={{display:isMobile ?'flex':'none',justifyContent:'center'}}>Contact</Typography>
                 
-        <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,}} >
+        <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,alignItems:'center'}} >
           <Map isMobile={isMobile}/>
             </Box>
             
