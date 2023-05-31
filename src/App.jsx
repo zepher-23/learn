@@ -451,11 +451,9 @@ Are you a student dreaming of attending your dream college or university? Our Co
         <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'200px',color:'white'}}>call us</Button>
 
       </Box>
-     <Box  sx={{backgroundColor:'secondary.main',p:isMobile?1: 4,px:isMobile ? 1:8,mt:isMobile ?2 :1,display:'flex',justifyContent:'center',flexDirection:isMobile ? 'column':'row'}}>
         <ContactForm isMobile = {isMobile} />
 
       
-      </Box>
 
       <Footer />
       <Box sx={{ display: 'flex',flexDirection:'column',alignItems:'center',zIndex:1000, position: 'fixed', bottom: '30px', right: '30px' }}>
