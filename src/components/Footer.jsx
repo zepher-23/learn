@@ -23,7 +23,7 @@ const Footer = () => {
 
     return (
         <div>
-       <Box  sx={{ mt: 1,display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #2b3150, #2b3150)' }}>
+       <Box  sx={{ display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #2b3150, #2b3150)' }}>
         
                 <Grid container >
                     <Grid xs={12} lg={4}>
@@ -86,13 +86,13 @@ const Footer = () => {
 
                 </Grid>
 
- <Box sx={{px:isMobile ? 2:12, backgroundColor: 'primary.main', minHeight: '40px',display:'flex',flexDirection:isMobile ?'column' :'row',justifyContent:'space-between',alignItems:'center' }}>
-                    <Typography variant={isMobile ? 'subtitle1' :"body2"} pt={isMobile ? 1:0} sx={{color:'white'}}>
+ <Box sx={{px:isMobile ? 2:12, backgroundColor: 'secondary.dark', minHeight: '40px',display:'flex',flexDirection:isMobile ?'column' :'row',justifyContent:'space-between',alignItems:'center' }}>
+                    <Typography variant={isMobile ? 'subtitle1' :"body2"} pt={isMobile ? 1:0} sx={{color:'primary.light'}}>
                         Copyright &copy; 2023 - ZephyrLearn.in  
 
                     </Typography>
                     <Typography variant="body2" p={1} >
-                        <Link href="#" sx={{color:'primary.dark'}}>Privacy Policy</Link> - <Link href="#" sx={{color:'primary.dark'}}>Terms & Conditions</Link>
+                        <Link href="#" sx={{color:'primary.light'}}>Privacy Policy</Link> - <Link href="#" sx={{color:'primary.light'}}>Terms & Conditions</Link>
                     </Typography>
                 </Box>
 

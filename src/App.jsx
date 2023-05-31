@@ -34,6 +34,8 @@ import university from './assets/images/university.png'
 import checked from './assets/images/checked.png'
 import Testimonial from './components/Testimonial'
 import cta from './assets/images/cta.png'
+import ContactForm from './components/ContactForm'
+import Map from './components/Map'
 
 const json = jsonData
 
@@ -169,7 +171,6 @@ const InfoText = styled(Typography)(({ theme }) => ({
 }))
 
 function App() {
-
   const isMobile = useMediaQuery('(max-width:768px)');
   const [contactOpen, setContactOpen] = useState(false);
   const handleContactOpen = () => {
@@ -346,7 +347,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
         </Box>
         
 
-        <Grid container    sx={{backgroundColor:isMobile ? 'secondary.main' :'', color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center',p:isMobile ? 5:2,px:isMobile ? 1 : 3}} >
+        <Grid container sx={{backgroundColor:isMobile ? 'secondary.main' :'', color:'black', display:'flex', flexDirection:'row',flexWrap:'wrap',justifyContent:'center',p:isMobile ? 5:2,px:isMobile ? 1 : 3}} >
          
           <Box sx={{display:isMobile ? 'none' :'flex',flexDirection:'row',height:'70vh',width:'100%',position:'absolute',zIndex:-1,left:'0px'}}>
             <Box sx={{width:'50%',height:'100%', backgroundImage: 'linear-gradient(to right, #2b3150, #28c2dc)',clipPath:isMobile ? "":'polygon(0 0, 100% 0%, 75% 100%, 0% 100%)'}}>
@@ -434,8 +435,14 @@ Are you a student dreaming of attending your dream college or university? Our Co
       </Box>
       
       <Box sx={{mt:8}}>
-        <Testimonial isMobile={isMobile } />
+        <Testimonial isMobile={isMobile} />
       </Box>
+
+      <Box sx={{height:'40vh',color:'black'}}>
+        Alumni
+      </Box>
+
+      
       <Box sx={{ p: 4, px: isMobile ? 3:8,m:1, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'center', alignItems: 'center',backgroundColor:'secondary.main' }}>
         <img src={cta } alt="" style={{width:isMobile ? '60px':'100px'}}/>
         <Typography variant={isMobile ? 'body1' : 'h5'} sx={{ maxWidth: isMobile ? '100%' : '65%', p: isMobile ? 3 : 3, px: isMobile ? 0 : 5, fontWeight: isMobile ? 300 : 600, color: 'primary.text',textAlign:isMobile?'justify':'start' }}>
@@ -444,10 +451,14 @@ Are you a student dreaming of attending your dream college or university? Our Co
         <Button size='large' color='tertiary' variant='contained' sx={{minWidth:'200px',color:'white'}}>call us</Button>
 
       </Box>
+     <Box  sx={{backgroundColor:'secondary.main',p:isMobile?1: 4,px:isMobile ? 1:8,mt:isMobile ?2 :1,display:'flex',justifyContent:'center',flexDirection:isMobile ? 'column':'row'}}>
+        <ContactForm isMobile = {isMobile} />
 
+      
+      </Box>
 
       <Footer />
-      <Box sx={{ display: 'flex',flexDirection:'column',alignItems:'center', position: 'fixed', bottom: '30px', right: '30px' }}>
+      <Box sx={{ display: 'flex',flexDirection:'column',alignItems:'center',zIndex:1000, position: 'fixed', bottom: '30px', right: '30px' }}>
         <Box boxShadow={2} sx={{display:'flex',flexDirection:'column',justifyContent:'start',alignItems:'center', width:contactOpen ? '55px':'50px', height: contactOpen ? '170px' : '46px', backgroundColor: 'background.lightest', mb: 2, borderRadius: '50px', position: 'absolute', bottom: '-10px', transition: '0.2s ease',overflow:'hidden' }}>
           <CallIcon className="fab-icon" sx={{color:'primary.main',p:1,pt:3,width:'30px',height:'30px',transition:'0.2s'}} />
           <WhatsAppIcon className="fab-icon" sx={{color:'tertiary.main', p:1,pt:2,width:'30px',height:'30px',transition:'0.2s'}} />
