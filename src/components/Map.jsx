@@ -7,9 +7,9 @@ const containerStyle = {
   borderRadius:'20px'
 };
 const containerStyleMob = {
-  width: '340px',
-  height: '340px',
-  borderRadius:'20px'
+  width: '100vw',
+  height: '360px',
+  
 }
   
 const center = {

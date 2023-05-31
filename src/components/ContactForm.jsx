@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, Box, Grid ,Checkbox,FormGroup,FormControl,FormControlLabel,FormLabel} from '@mui/material';
+import { TextField, Box, Grid ,Checkbox,FormGroup,FormControl,FormControlLabel,FormLabel,Typography, Button} from '@mui/material';
 import { alpha, styled } from '@mui/material/styles';
 
 import Map from "./Map";
@@ -31,7 +31,10 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
       },
     '& input': {
       color: 'white', // Set the input text color to white
-    },
+      },
+      '& textarea': {
+        color:'white'
+    }
     },
   
 }));
@@ -40,14 +43,14 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
 const ContactForm = ({isMobile}) => {
     return (
         
-        <Box sx={{ backgroundColor: 'secondary.main', p: isMobile ? 1 : 4, px: isMobile ? 1 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row' }}>
-            
+        <Box sx={{ backgroundColor: 'secondary.main', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row' }}>
+            <Typography variant="h6" sx={{display:isMobile ?'flex':'none',justifyContent:'center'}}>Contact</Typography>
                 
-        <Box  boxShadow={4} sx={{backgroundColor:'secondary.main',p:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,}} >
-          <Map isMobile={ isMobile}/>
+        <Box  boxShadow={isMobile ? 0:0} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,}} >
+          <Map isMobile={isMobile}/>
             </Box>
             
-            <Box boxShadow={4} sx={{p:isMobile ? 1:5, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', ml: isMobile ? 0:5,my:isMobile ? 2:0, borderRadius: '20px' }}>
+            <Box boxShadow={2} sx={{p:isMobile ? 1:5, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
                
                
                 <Box sx={{display:'flex',flexDirection:isMobile?'column':'row',justifyContent:'start'}}>
@@ -60,37 +63,52 @@ const ContactForm = ({isMobile}) => {
                 <CustomTextField label="Email" type="email" variant="outlined" required sx={{width:isMobile ? 'auto':'300px'}} > </CustomTextField>
 
                 </Box>
-                <Box sx={{ display: 'flex', flexDirection:'row', justifyContent: 'start',p:'10px' }}>
+                <Box sx={{ display: 'flex', flexDirection:isMobile ? 'column':'row', justifyContent: 'start',p:'10px' }}>
                     <FormControl component="fieldset" required>
                         <FormLabel component="legend">Reason</FormLabel>
-                        <FormGroup aria-label="position" row>
+                        <FormGroup aria-label="position"  sx={{flexDirection:isMobile ? 'column':'row'}}>
         <FormControlLabel
           control={<Checkbox color="tertiary" />}
           label="Internship"
-          labelPlacement="start"
+          labelPlacement={isMobile ?"end":"start"}
         />
         <FormControlLabel
           control={<Checkbox color="tertiary" />}
           label="Skill Course"
-          labelPlacement="start"
+          labelPlacement={isMobile ?"end":"start"}
         />
         <FormControlLabel
           control={<Checkbox color="tertiary" />}
           label="Project Guidance"
-          labelPlacement="start"
+          labelPlacement={isMobile ?"end":"start"}
         />
         <FormControlLabel
           control={<Checkbox color="tertiary" />}
           label="College Admissions"
-          labelPlacement="start"
+          labelPlacement={isMobile ?"end":"start"}
         />
       </FormGroup>
                         
-      </FormControl>
+                    </FormControl>
+                   
                 </Box>
+                <Box sx={{display:'flex'}}> 
+                        <CustomTextField label="Write to us..." type="text" variant="outlined" multiline  rows={4}   sx={{width:isMobile ?"auto" : "100%",color:'white',flexGrow:1}} > </CustomTextField>
+                </Box>
+                <Box sx={{mt:3, display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-evenly' }}>
+                <Button  size="large" color="tertiary" variant="contained" sx={{m:2}}>
+                Schedule a Call back ?
+                </Button>
+                <Button size="large" color="primary" variant="contained" sx={{m:2}}>
+                Send us a Mail ? 
+       </Button>
+
             </Box>
+            </Box>
+
            
-       
+           
+            
       </Box>
         
     );
