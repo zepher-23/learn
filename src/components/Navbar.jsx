@@ -51,9 +51,9 @@ const [expanded, setExpanded] = useState(false)
     return (
         
            
-        <Box  sx={{ width: '100vw', zIndex: 1000, position: 'fixed' }}>
+        <Box  sx={{ width: '100vw', position: 'fixed',zIndex:3 }}>
             
-      <Grid boxShadow={1} container sx={{position:'relative',width:'100vw',m:0, p:0, backgroundColor: 'white',display:'flex',flexGrow:1,flexDirection:'row',alignItems:'center', py:scrollValue>150 ? 0 : 1, height:scrollValue>150 ? '80px' : '100px',transition:'0.2s',zIndex:2}}  spacing={1} >
+      <Grid boxShadow={1} container sx={{position:'relative',width:'100vw',m:0, p:0, backgroundColor: 'white',display:'flex',flexGrow:1,flexDirection:'row',alignItems:'center', py:scrollValue>150 ? 0 : 1, height:scrollValue>150 ? '80px' : '100px',transition:'0.2s',zIndex:3}}  spacing={1} >
                 <Grid  xs={6} sm={6} md={2} >
                     <Item sx={{ml:isMobile ? 2:6,transition:'0.2s'}}>
                         <img src={logo} style={{width:isMobile ? (scrollValue>150 ? '80px' : '100px') :scrollValue>150 ? '100px':'140px',transition:'0.5s'}} />
@@ -109,10 +109,11 @@ const [expanded, setExpanded] = useState(false)
                 
 
             </Box>
-            <Grid container boxShadow={1} sx={{position:'relative',width:'100vw',m:0, p:0,display:isMobile ? 'flex' :' none', backgroundColor: 'white',zIndex:'1',flexDirection:'row',alignItems:'center', py:2,transition:'0.5s',transform: expanded ? 'translateY(0px)' : 'translateY(-200px)'}} >
+            <Grid container boxShadow={1} sx={{position:'absolute',zIndex:1,width:'100vw',m:0, p:0,display:isMobile ? 'flex' :' none', backgroundColor: 'white',flexDirection:'row',alignItems:'center',transition:'0.2s',transform: expanded ? 'translateY(0px)' : 'translateY(-200px)'}} >
 
             
-            <Grid xs={12} sx={{ display: isMobile ? 'flex' : 'none', flexDirection: 'column',  }}>
+                <Grid xs={12} sx={{  }}>
+                    <Box sx={{display: isMobile ? 'flex' : 'none', flexDirection: 'column'}}>
                         <Button sx={{p:2,height:'40px'}}>
                             Internship Training
                         </Button>
@@ -125,7 +126,9 @@ const [expanded, setExpanded] = useState(false)
                         <Button sx={{p:2,height:'40px'}}>
                             College Admisson
                         </Button>
-                </Grid></Grid>
+                    </Box>
+                </Grid>
+            </Grid>
             
 
             

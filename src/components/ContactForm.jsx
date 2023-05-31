@@ -66,13 +66,11 @@ const ContactForm = ({isMobile}) => {
                 <Box sx={{ display: 'flex', flexDirection:isMobile ? 'column':'row', justifyContent: 'start',p:'10px' }}>
                     <FormControl component="fieldset" required>
                         <FormLabel component="legend">Reason</FormLabel>
-                        <FormGroup aria-label="position"  sx={{flexDirection:isMobile ? 'column':'row'}}>
+                        <FormGroup aria-label="reason"  sx={{display:'flex',flexDirection:isMobile ? 'column':'row',justifyContent:'space-between'}}>
         <FormControlLabel 
           control={<Checkbox color="tertiary" />}
           label="Internship"
           labelPlacement={isMobile ?"end":"start"}
-          
-          sx={{fontSize:'1px',}}                      
         />
         <FormControlLabel
           control={<Checkbox color="tertiary" />}

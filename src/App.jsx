@@ -196,7 +196,7 @@ function App() {
             
 Transform your career prospects with our immersive programs, bridging academia and industry, equipping you with high-demand skills and opening doors to abundant job opportunities.
             </Typography>
-             <Button boxShadow={2} variant='contained' color="primary" sx={{display:'flex', p: 1,flexFlow:1,color:'white',  mt: 4, mb: 0, borderRadius: '10px',justifyContent:'center' }}>
+             <Button boxShadow={2} variant='contained' color="primary" sx={{display:'flex',zIndex:0, p: 1,flexFlow:1,color:'white',  mt: 4, mb: 0, borderRadius: '10px',justifyContent:'center' }}>
             
  Explore Program
           
