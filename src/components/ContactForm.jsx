@@ -50,27 +50,29 @@ const ContactForm = ({isMobile}) => {
           <Map isMobile={isMobile}/>
             </Box>
             
-            <Box boxShadow={2} sx={{p:isMobile ? 1:5, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
+            <Box boxShadow={2} sx={{p:isMobile ? 1:2, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
                
                
                 <Box sx={{display:'flex',flexDirection:isMobile?'column':'row',justifyContent:'start'}}>
-                    <CustomTextField label="First Name" variant="outlined" required > </CustomTextField>
-                    <CustomTextField label="Second Name" variant="outlined" required> </CustomTextField>
+                    <CustomTextField size="small" label="First Name" variant="outlined" required > </CustomTextField>
+                    <CustomTextField size="small" label="Second Name" variant="outlined" required> </CustomTextField>
                 </Box> 
 
                 <Box sx={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'start' }} >
-                <CustomTextField label="Mobile" type="number" variant="outlined" required > </CustomTextField>
-                <CustomTextField label="Email" type="email" variant="outlined" required sx={{width:isMobile ? 'auto':'300px'}} > </CustomTextField>
+                <CustomTextField size="small" label="Mobile" type="number" variant="outlined" required > </CustomTextField>
+                <CustomTextField size="small" label="Email" type="email" variant="outlined" required sx={{width:isMobile ? 'auto':'300px'}} > </CustomTextField>
 
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection:isMobile ? 'column':'row', justifyContent: 'start',p:'10px' }}>
                     <FormControl component="fieldset" required>
                         <FormLabel component="legend">Reason</FormLabel>
                         <FormGroup aria-label="position"  sx={{flexDirection:isMobile ? 'column':'row'}}>
-        <FormControlLabel
+        <FormControlLabel 
           control={<Checkbox color="tertiary" />}
           label="Internship"
           labelPlacement={isMobile ?"end":"start"}
+          
+          sx={{fontSize:'1px',}}                      
         />
         <FormControlLabel
           control={<Checkbox color="tertiary" />}
@@ -93,13 +95,13 @@ const ContactForm = ({isMobile}) => {
                    
                 </Box>
                 <Box sx={{display:'flex'}}> 
-                        <CustomTextField label="Write to us..." type="text" variant="outlined" multiline  rows={4}   sx={{width:isMobile ?"auto" : "100%",color:'white',flexGrow:1}} > </CustomTextField>
+                        <CustomTextField size="small" label="Write to us..." type="text" variant="outlined" multiline  rows={4}   sx={{width:isMobile ?"auto" : "100%",color:'white',flexGrow:1}} > </CustomTextField>
                 </Box>
                 <Box sx={{mt:3, display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-evenly' }}>
                 <Button  size="large" color="tertiary" variant="contained" sx={{m:2}}>
                 Schedule a Call back ?
                 </Button>
-                <Button size="large" color="primary" variant="contained" sx={{m:2}}>
+                <Button size="large" color="primary" variant="contained" sx={{m:2,color:'white'}}>
                 Send us a Mail ? 
        </Button>
 
