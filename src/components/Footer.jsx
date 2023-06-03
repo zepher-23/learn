@@ -23,7 +23,7 @@ const Footer = () => {
 
     return (
         <div>
-       <Box  sx={{ display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #2b3150, #2b3150)' }}>
+       <Box  sx={{ display:'flex', flexDirection:'column', width: '100vw', backgroundImage: 'linear-gradient(to right, #2b3150, #2b3150)'}}>
         
                 <Grid container >
                     <Grid xs={12} lg={4}>

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import JobItem from "../components/JobItem";
+import Footer from "../components/Footer"
 import { Typography, Box, Container, Grid, Button, Link, useMediaQuery } from "@mui/material";
 
 const Jobs = () => {
-  const isMobile = useMediaQuery('(max-width:768px)')
-const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=ce5edff6&app_key=d1a54da95c45ae1383dff804ff0c8b13&results_per_page=40&what=software%20developer&max_days_old=6'
+    const isMobile = useMediaQuery('(max-width:768px)')
+    const [jobs, setJobs] = useState({})
+    const [count,setCount] = useState(0)
 
+const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_key=3712b0edd684adfbb39e145f69685641&results_per_page=20&what_or=software%20developer%20content%20writer%20digital%20markerting&where=karnataka&max_days_old=6'
 
     const findJobs = async(url) => {
         try {
@@ -26,28 +29,63 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=ce5edff6&app_
     
     }
 
-    
-    
-    findJobs(url).then(result => { 
-        console.log(result[0].description)
-        result.forEach(element => {
+    useEffect(() => {
+        console.log(count)
+        setCount(count+1)
+        findJobs(url).then(result => { 
+    setJobs(result)
+        // result.forEach(element => {
               
             
-          });
+        //   });
       }).catch(err =>{console.log(err)})
+        
+    },[])
+    
+    
+ 
+    
     
    
     return (
-          <>
+        <>
+            <Navbar />
       
-      <Box>
-        <Navbar />
-                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'background.medium', height: '100vh', width: '100vw' }}>
-                    <JobItem/>
+      
+            {
+                false ? (<Typography variant="h6" sx={{color:'black'}}> Loading...</Typography>) : (
+                     <Box sx={{ display: 'flex',color:'black', flexDirection: 'column', justifyContent: 'start', alignItems: 'center', backgroundColor: 'background.light',minHeight:'70vh', width: '100vw', overflow: 'scroll',  pt: '150px' }}>
+                    
+                    {
+                        
+                        Object.keys(jobs).map((item) => {
+                        
+                            
+                            return (
+      <JobItem
+        key={jobs[item].id}
+        title={jobs[item].title}
+        company={jobs[item].company.display_name}
+        description={jobs[item].description}
+        location={jobs[item].location.display_name}
+                                    created={jobs[item].created}
+                                    redirect={jobs[item].redirect_url}
+      />
+    );
+                        })
+                    }
+                        
+                   
+                    
+
           
         </Box>
+                )
+                    
+            }
+        
+               <Footer />
 
-      </Box>
     </>
     );
 };
