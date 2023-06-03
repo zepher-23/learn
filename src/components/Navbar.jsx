@@ -1,4 +1,5 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { Box, Container, Paper, Button, Link, Typography, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import { styled } from '@mui/material/styles';
@@ -62,18 +63,19 @@ const [expanded, setExpanded] = useState(false)
                 </Grid>
                 <Grid xs={12} md={7} sx={{my:0,display:isMobile ? "none" : 'flex',transition:'0.5s'}}  >
                     <Item sx={{ display:'flex', flexDirection: 'row', flexGrow:1,justifyContent:'center',p:2,backgroundColor:'white',transition:'0.5s',transform:scrollValue>150 ? 'translateY(0px)':'translateY(-100px)' }}>
-                        <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
+                    <NavLink to='/internship'>   <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
                             Internship Training
-                        </Button>
-                        <Button color="secondary"  sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
+                        </Button></NavLink>
+                      <NavLink to='/course'> <Button color="secondary"  sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
                             Skill Courses
-                        </Button>
-                        <Button  color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
+                        </Button></NavLink> 
+                      <NavLink to='/project'> <Button  color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
                             Project Guidance
-                        </Button>
-                        <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
+                        </Button></NavLink> 
+                       <NavLink to='/admission'> <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
                             College Admisson
                         </Button>
+                        </NavLink>
                      
 
                     </Item>

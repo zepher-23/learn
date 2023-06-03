@@ -2,7 +2,7 @@
   "name": "learn",
   "private": true,
   "version": "0.0.0",
-  "commit_count": 12,
+  "commit_count": 13,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,8 @@
     "@mui/system": "^5.11.15",
     "@react-google-maps/api": "^2.18.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

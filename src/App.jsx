@@ -1,6 +1,7 @@
 import React,  { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import JobBanner from './components/JobBanner'
 import expertIcon from './assets/images/expert-icon.png'
 import rupee from './assets/images/rupee.png'
 
@@ -19,6 +20,7 @@ import CardContent from "@mui/material/CardContent";
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import Accordion from '@mui/material/Accordion';
+
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -36,6 +38,9 @@ import Testimonial from './components/Testimonial'
 import cta from './assets/images/cta.png'
 import ContactForm from './components/ContactForm'
 import Map from './components/Map'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 const json = jsonData
 
@@ -433,7 +438,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
         </Grid>
 
       </Box>
-      
+{/*       
       <Box sx={{mt:8}}>
         <Testimonial isMobile={isMobile} />
       </Box>
@@ -442,8 +447,10 @@ Are you a student dreaming of attending your dream college or university? Our Co
         Alumni
       </Box>
 
-      
-      <Box sx={{ p: 4, px: isMobile ? 3:8,m:1, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'center', alignItems: 'center',backgroundColor:'secondary.main' }}>
+       */}
+     <JobBanner />
+
+      <Box sx={{ p: 4, px: isMobile ? 3:8,m:1,mt:5, color: 'black', display: 'flex',flexDirection:isMobile ? 'column':'row', justifyContent: 'center', alignItems: 'center',backgroundColor:'secondary.main' }}>
         <img src={cta } alt="" style={{width:isMobile ? '60px':'100px'}}/>
         <Typography variant={isMobile ? 'body1' : 'h5'} sx={{ maxWidth: isMobile ? '100%' : '65%', p: isMobile ? 3 : 3, px: isMobile ? 0 : 5, fontWeight: isMobile ? 300 : 600, color: 'primary.text',textAlign:isMobile?'justify':'start' }}>
           Elevate your learning with our innovative EdTech platform. Discover, engage, and excel. Join us today!
@@ -465,6 +472,8 @@ Are you a student dreaming of attending your dream college or university? Our Co
         <PermPhoneMsgIcon />
       </Fab>
       </Box>
+
+    
       
     </>
   )
