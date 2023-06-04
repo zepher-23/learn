@@ -7,9 +7,11 @@ import { Typography, Box, Container, Grid, Button, Link, useMediaQuery } from "@
 const Jobs = () => {
     const isMobile = useMediaQuery('(max-width:768px)')
     const [jobs, setJobs] = useState({})
-    const [count,setCount] = useState(0)
+    const [count, setCount] = useState(0)
+      const [isLoading, setIsLoading] = useState(true);
 
-const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_key=3712b0edd684adfbb39e145f69685641&results_per_page=20&what_or=software%20developer%20content%20writer%20digital%20markerting&where=karnataka&max_days_old=6'
+
+const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_key=3712b0edd684adfbb39e145f69685641&results_per_page=20&what_or=software%20developer%20content%20writer%20digital%20markerting&what=fresher&where=karnataka&max_days_old=6'
 
     const findJobs = async(url) => {
         try {
@@ -33,12 +35,16 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_
         console.log(count)
         setCount(count+1)
         findJobs(url).then(result => { 
-    setJobs(result)
+            setJobs(result)
+            setIsLoading(false)
         // result.forEach(element => {
               
             
         //   });
-      }).catch(err =>{console.log(err)})
+        }).catch(err => {
+            console.log(err);
+        setIsLoading(false)
+        })
         
     },[])
     
@@ -53,9 +59,13 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_
       
       
             {
-                false ? (<Typography variant="h6" sx={{color:'black'}}> Loading...</Typography>) : (
+                isLoading ? (
+                    <Box sx={{width:'100vw',height:'50vh',display:'flex',justifyContent:'center',alignItems:'center',mt:'150px'}}>
+                        <Typography variant="h5" sx={{ color: 'text.tertiary' }}> Loading...</Typography>
+                    </Box>
+                ) : (
                      <Box sx={{ display: 'flex',color:'black', flexDirection: 'column', justifyContent: 'start', alignItems: 'center', backgroundColor: 'background.light',minHeight:'70vh', width: '100vw', overflow: 'scroll',  pt: '150px' }}>
-                    
+                    <Typography variant="h5" sx={{color:'text.secondary',mb:2}} >Recent Job Postings</Typography>
                     {
                         
                         Object.keys(jobs).map((item) => {
@@ -84,7 +94,11 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_
                     
             }
         
-               <Footer />
+            {
+                isLoading ? <></>:<Footer /> 
+
+            }
+               
 
     </>
     );
