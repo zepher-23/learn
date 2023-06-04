@@ -8,10 +8,10 @@ const Jobs = () => {
     const isMobile = useMediaQuery('(max-width:768px)')
     const [jobs, setJobs] = useState({})
     const [count, setCount] = useState(0)
-      const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
 
-const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_key=3712b0edd684adfbb39e145f69685641&results_per_page=20&what_or=software%20developer%20content%20writer%20digital%20markerting&what=fresher&where=karnataka&max_days_old=6'
+const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_key=3712b0edd684adfbb39e145f69685641&results_per_page=20&what_or=software%20developer%20content%20writer%20digital%20markerting&what=fresher&where=karnataka&max_days_old=6&sort_by=date'
 
     const findJobs = async(url) => {
         try {
@@ -56,15 +56,25 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_
     return (
         <>
             <Navbar />
+            <Box sx={{display:'flex',flexDirection:'row'}}>
+
+            
+                <Box sx={{display:isMobile ?'none':'flex',justifyContent:'center',alignItems:'center', width: '25vw', maxWidth: '25vw', height: '100vh', backgroundColor: 'secondary.main', position: 'relative', mb: 1 }}>
+                    <Box sx={{ p: 2 }}>
+                        <Typography sx={{display:'flex', color: 'white',justifyContent:'center',alignItems:'center' }}>Content coming soon !</Typography>
+                    </Box>
+
+            </Box>
       
       
             {
                 isLoading ? (
-                    <Box sx={{width:'100vw',height:'50vh',display:'flex',justifyContent:'center',alignItems:'center',mt:'150px'}}>
+                    <Box sx={{height:'50vh',width:isMobile?'100vw':'70vw',display:'flex',justifyContent:'center',alignItems:'center',mt:'150px'}}>
                         <Typography variant="h5" sx={{ color: 'text.tertiary' }}> Loading...</Typography>
                     </Box>
-                ) : (
-                     <Box sx={{ display: 'flex',color:'black', flexDirection: 'column', justifyContent: 'start', alignItems: 'center', backgroundColor: 'background.light',minHeight:'70vh', width: '100vw', overflow: 'scroll',  pt: '150px' }}>
+                    ) : (
+                            <Box sx={{height:isMobile?'auto':'100vh',width:isMobile?'100vw':'74.5vw',overflow:isMobile?'auto':'scroll'}}>
+                     <Box sx={{ display: 'flex',color:'black', flexDirection: 'column', justifyContent: 'start', alignItems: 'center', backgroundColor: 'background.light',minHeight:'70vh',  pt: '150px' }}>
                     <Typography variant="h5" sx={{color:'text.secondary',mb:2}} >Recent Job Postings</Typography>
                     {
                         
@@ -78,22 +88,19 @@ const url = 'https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=c637f7a8&app_
         company={jobs[item].company.display_name}
         description={jobs[item].description}
         location={jobs[item].location.display_name}
-                                    created={jobs[item].created}
-                                    redirect={jobs[item].redirect_url}
-      />
-    );
-                        })
+        created={jobs[item].created}
+        redirect={jobs[item].redirect_url}
+      />);
+                })
                     }
-                        
-                   
-                    
-
           
         </Box>
-                )
+               
+               </Box>                 )
                     
             }
-        
+                                
+        </Box>
             {
                 isLoading ? <></>:<Footer /> 
 
