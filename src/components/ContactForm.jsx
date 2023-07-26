@@ -40,17 +40,41 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
 }));
 
 
-const ContactForm = ({isMobile}) => {
+const ContactForm = ({ isMobile }) => {
+  const mangaloreCenter = { lat: 12.873048628255173, lng: 74.8513348660786 }
+  const bangaloreCenter = {lat:13.00837293717805, lng:77.6675257144782}
     return (
         
-        <Box sx={{ backgroundColor: 'secondary.dark', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center', flexDirection: isMobile ? 'column' : 'row',mb:'1px' }}>
+        <Box sx={{ backgroundColor: 'secondary.dark', p: isMobile ? 1 : 4, px: isMobile ? 0 : 8, mt: isMobile ? 2 : 1, display: 'flex', justifyContent: 'center',alignItems:'center', flexDirection: isMobile ? 'column' : 'column',mb:'1px' }}>
             <Typography variant="h6" sx={{display:isMobile ?'flex':'none',justifyContent:'center'}}>Contact</Typography>
                 
-        <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'29vw',display:'flex',justifyContent:'center',borderRadius:'20px',my:isMobile ? 2:0,alignItems:'center'}} >
-          <Map isMobile={isMobile}/>
+       
+        <Box sx={{display:'flex',flexDirection:isMobile?'column':'row',width:isMobile?'100%':'100%'}}>
+          <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'19vw',display:'flex',justifyContent:'center',borderRadius:'10px',my:isMobile ? 2:2,alignItems:'center'}} >
+          <Map isMobile={isMobile} center={mangaloreCenter} />
+          </Box>
+
+          <Box sx={{flexGrow:1,height:'100%',justifyContent:'center'}}>
+
+            <Box sx={{ p: 5, textAlign:'left'}}>
+              <Typography variant="h6">Mangalore</Typography>
+              <Typography variant="body1">5th floor, Oberle Towers, Balmatta, Mangaluru, Karnataka 575001. </Typography>
+                          <Typography variant="body1">Phone : +91 8111843307</Typography>
+
             </Box>
+            <Box sx={{ p:5,textAlign:'right'}}>
+              <Typography variant="h6">Bangalore</Typography>
+              <Typography variant="body1" sx={{display:'flex'}}>2nd floor #9, new police station, road, SP Naidu Layout, Ramamurthy Nagar, Bengaluru, Karnataka 560016.  </Typography>
+            <Typography variant="body1">Phone : +91 8111843307</Typography>
+            </Box>
+          </Box>
+          <Box  boxShadow={isMobile ? 0:3} sx={{backgroundColor:'secondary.main',p:isMobile ? 0:1,width:isMobile? 'auto':'19vw',display:'flex',justifyContent:'center',borderRadius:'10px',my:isMobile ? 2:2,alignItems:'center'}} >
+          <Map isMobile={isMobile} center={bangaloreCenter} />
+        </Box>
+        </Box>
+        
             
-            <Box boxShadow={3} sx={{p:isMobile ? 1:2, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '20px' }}>
+            <Box boxShadow={3} sx={{width:isMobile?'90vw':'100%',p:isMobile ? 1:2, display:'flex',flexDirection:'column', justifyContent:'space-evenly', flexGrow: 1, backgroundColor: 'secondary.main', mx: isMobile ? 1:2,my:isMobile ? 2:0, borderRadius: '10px' }}>
                
                
                 <Box sx={{display:'flex',flexDirection:isMobile?'column':'row',justifyContent:'start'}}>

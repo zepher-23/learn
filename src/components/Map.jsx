@@ -3,8 +3,8 @@ import { GoogleMap, LoadScript ,Marker} from '@react-google-maps/api';
 
 const containerStyle = {
   width: '400px',
-  height: '400px',
-  borderRadius:'20px'
+  height: '300px',
+  borderRadius:'10px'
 };
 const containerStyleMob = {
   width: '100vw',
@@ -12,12 +12,11 @@ const containerStyleMob = {
   
 }
   
-const center = {
- 
-  lat:12.87312682497882, lng:74.85123385300423
-};
+// const center = {
+//   lat:12.87312682497882, lng:74.85123385300423
+// };
 
-function MyComponent({isMobile}) {
+function MyComponent({isMobile,center}) {
   return (
     <LoadScript googleMapsApiKey="AIzaSyA7x-BWZIYMBmoFTDxfI5pl6ZqY3QIUaao">
       <GoogleMap
@@ -34,4 +33,4 @@ function MyComponent({isMobile}) {
   )
 }
 
-export default React.memo(MyComponent)
+export default MyComponent

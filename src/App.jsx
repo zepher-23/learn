@@ -289,7 +289,7 @@ Are you ready to acquire new skills and elevate your career? Our Skill Courses o
            
           </Grid>
           
-          <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:isMobile ? 2:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
+          {/* <Grid className='service' xs={12} md={6} lg={10} boxShadow={1} sx={{m:2,p:isMobile ? 2:4,transition:'0.2s',borderRadius:'5px','&:hover':{cursor:'pointer',boxShadow:'4'},backgroundColor:'background.lightest'}} >
             
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{display:'flex',flexDirection:'column',flexGrow:1}}>  <Typography variant={isMobile ? 'h5':'h4'} sx={{ mb: 0, color: 'secondary.main', fontWeight: '700', '&:hover': { color: '#3bcc86' }, transition: '0.2s', flexGrow: 1 }}> Project Guidance </Typography>
@@ -335,7 +335,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
 
               </Box>
            
-          </Grid>
+          </Grid> */}
 
         </Grid>
 
@@ -416,7 +416,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
 
             </BenifitCard>
           </Grid>
-          <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
+          {/* <Grid xs={12} lg={2.5} boxShadow={8} sx={{backgroundColor:'secondary.glass',m:2,mt:isMobile ? '20px' : '50px',borderRadius:'10px',display:'flex',flexDirection:'column'}}>
             <Box sx={{p:2,pb:1}}><Typography variant='body2' sx={{color:'tertiary.main'}}> You get</Typography>
             <Typography variant='h5' sx={{ color: 'primary.text', fontWeight: 600 }}>1 on 1 Mentors</Typography></Box> 
             <BenifitCard isMobile={isMobile}>
@@ -433,7 +433,7 @@ Are you a student dreaming of attending your dream college or university? Our Co
 
             </BenifitCard>
 
-          </Grid>
+          </Grid> */}
 
         </Grid>
 
@@ -466,8 +466,8 @@ Are you a student dreaming of attending your dream college or university? Our Co
       <Box sx={{ display: 'flex',flexDirection:'column',alignItems:'center',zIndex:1000, position: 'fixed', bottom: '30px', right: '30px' }}>
         <Box boxShadow={2} sx={{display:'flex',flexDirection:'column',justifyContent:'start',alignItems:'center', width:contactOpen ? '55px':'50px', height: contactOpen ? '170px' : '46px', backgroundColor: 'background.lightest', mb: 2, borderRadius: '50px', position: 'absolute', bottom: '-10px', transition: '0.2s ease',overflow:'hidden' }}>
           <CallIcon className="fab-icon" sx={{color:'primary.main',p:1,pt:3,width:'30px',height:'30px',transition:'0.2s'}} />
-          <WhatsAppIcon className="fab-icon" sx={{color:'tertiary.main', p:1,pt:2,width:'30px',height:'30px',transition:'0.2s'}} />
-        </Box>
+        <Link href="https://api.whatsapp.com/send?phone=8111843307" target="_blank"> <WhatsAppIcon className="fab-icon" sx={{color:'tertiary.main', p:1,pt:2,width:'30px',height:'30px',transition:'0.2s'}} />
+       </Link>  </Box>
          <Fab  color="secondary" aria-label="add"  onClick={handleContactOpen} >
         <PermPhoneMsgIcon />
       </Fab>

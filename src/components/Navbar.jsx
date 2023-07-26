@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import '../assets/styles/navbar.css'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo1.png'
 import { maxWidth } from "@mui/system";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -57,7 +57,7 @@ const [expanded, setExpanded] = useState(false)
       <Grid boxShadow={1} container sx={{position:'relative',width:'100vw',m:0, p:0, backgroundColor: 'white',display:'flex',flexGrow:1,flexDirection:'row',alignItems:'center', py:scrollValue>150 ? 0 : 1, height:scrollValue>150 ? '80px' : '100px',transition:'0.2s',zIndex:3}}  spacing={1} >
                 <Grid  xs={6} sm={6} md={2} >
                     <Item sx={{ml:isMobile ? 2:6,transition:'0.2s'}}>
-                        <img src={logo} style={{width:isMobile ? (scrollValue>150 ? '80px' : '100px') :scrollValue>150 ? '100px':'140px',transition:'0.5s'}} />
+                        <img src={logo} style={{width:isMobile ? (scrollValue>150 ? '80px' : '100px') :scrollValue>150 ? '140px':'160px',transition:'0.5s'}} />
                     </Item>
                     
                 </Grid>
@@ -69,11 +69,15 @@ const [expanded, setExpanded] = useState(false)
                       <NavLink to='/course'> <Button color="secondary"  sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
                             Skill Courses
                         </Button></NavLink> 
-                      <NavLink to='/project'> <Button  color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
-                            Project Guidance
+                      <NavLink to='/contact'> <Button  color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}} >
+                            Contact
                         </Button></NavLink> 
-                       <NavLink to='/admission'> <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
-                            College Admisson
+                       <NavLink to='/team'> <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
+                            team
+                        </Button>
+                        </NavLink>
+                        <NavLink to='/careers'> <Button color="secondary" sx={{p:2,height:'30px',fontSize:isMobile ? '12px':''}}>
+                            careers
                         </Button>
                         </NavLink>
                      
